@@ -43,7 +43,7 @@ input::placeholder {
 
 button {
   border: none;
-  width: 60px;
+  width: 70px;
   height: 60px;
   margin: 10px;
   border-radius: 10%;
@@ -55,7 +55,8 @@ button {
 }
 
 .equalBtn {
-  background-color: #1480fb;
+  background-color: #1448f3;
+  width: 160px;
 }
 
 .operator {
