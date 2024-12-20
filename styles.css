@@ -54,6 +54,10 @@ button {
   cursor: pointer;
 }
 
+button:hover{
+  background-color: #717377;
+}
+
 .equalBtn {
   background-color: #1448f3;
   width: 160px;

@@ -14,36 +14,48 @@
   <body>
     <div class="container">
       <div class="calculator">
-        <input type="text" id="inputBox" placeholder="0" />
+        <input id="result" readonly />
         <div>
           <button class="button operator" id="clear">AC</button>
           <button class="button operator" id="backspace">DEL</button>
-          <button class="button operator" id="operator_btn">%</button>
-          <button class="button operator" id="operator_btn">&divide;</button>
+          <button class="button operator" onclick="appendToDisplay('%')">
+            %
+          </button>
+          <button class="button operator" onclick="appendToDisplay('&divide;')">
+            &divide;
+          </button>
         </div>
         <div>
-          <button class="button" id="number_button">7</button>
-          <button class="button" id="number_button">8</button>
-          <button class="button" id="number_button">9</button>
-          <button class="button operator" id="operator_btn">&times;</button>
+          <button class="button" onclick="appendToDisplay('7')">7</button>
+          <button class="button" onclick="appendToDisplay('8')">8</button>
+          <button class="button" onclick="appendToDisplay('9')">9</button>
+          <button class="button operator" onclick="appendToDisplay('&times;')">
+            &times;
+          </button>
         </div>
         <div>
-          <button class="button" id="number_button">4</button>
-          <button class="button" id="number_button">5</button>
-          <button class="button" id="number_button">6</button>
-          <button class="button operator" id="operator_btn">-</button>
+          <button class="button" value="4" onclick="appendToDisplay('4')">
+            4
+          </button>
+          <button class="button" onclick="appendToDisplay('5')">5</button>
+          <button class="button" onclick="appendToDisplay('6')">6</button>
+          <button class="button operator" onclick="appendToDisplay('-')">
+            -
+          </button>
         </div>
         <div>
-          <button class="button" id="number_button">1</button>
-          <button class="button" id="number_button">2</button>
-          <button class="button" id="number_button">3</button>
-          <button class="button operator" id="operator_btn">+</button>
+          <button class="button" onclick="appendToDisplay('1')">1</button>
+          <button class="button" onclick="appendToDisplay('2')">2</button>
+          <button class="button" onclick="appendToDisplay('3')">3</button>
+          <button class="button operator" onclick="appendToDisplay('+')">
+            +
+          </button>
         </div>
 
         <div>
-          <button class="button" id="number_button">0</button>
+          <button class="button" onclick="addNumber(0)">0</button>
           <button class="button operator" id="space">space</button>
-          <button class="button equalBtn" id="equal">=</button>
+          <button class="button equalBtn" id="equals">=</button>
         </div>
       </div>
     </div>
