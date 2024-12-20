@@ -82,14 +82,15 @@ function calculateExpression() {
   }
 
   try {
-    document.getElementById("prefixResult").textContent = evaluatePrefix([
-      expression.split(" "),
-    ]);
-    document.getElementById("postfixResult").textContent = evaluatePostfix([
-      expression.split(" "),
-    ]);
+    let result;
+
+    if (isOperator(expression[0])) {
+      result = evaluatePrefix(expression.split(""));
+    } else {
+      result = evaluatePostfix(expression.split(""));
+    }
   } catch (error) {
-    alert("Invalid expression! Please check and try again.");
+    alert("Invalid expression!");
   }
 }
 clear.addEventListener("click", clearExpression);
